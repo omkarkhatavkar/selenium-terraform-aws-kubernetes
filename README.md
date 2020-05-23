@@ -1,4 +1,4 @@
-# Selenium Terraform Kuberneters Integration (STKI)
+# Selenium Terraform AWS Kuberneters  Integration (STAKI)
 
 ## Credits to EKS Getting Started Guide Configuration
 
