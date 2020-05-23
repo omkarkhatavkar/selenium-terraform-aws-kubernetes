@@ -8,6 +8,7 @@ spec:
   selector:
     app: selenium-hub
   ports:
-  - port: 4444
-    nodePort: 30001
-  type: NodePort
+  - name: http
+    port: 80
+    targetPort: 4444
+  type: LoadBalancer

@@ -15,10 +15,12 @@ spec:
       containers:
         - name: node-chrome
           image: selenium/node-chrome
+          imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 5555
+            - name: http
+              containerPort: 5555
           env:
             - name: HUB_HOST 
               value: "selenium-srv"
             - name: HUB_PORT
-              value: "4444" 
+              value: "80" 

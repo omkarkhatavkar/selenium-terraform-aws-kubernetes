@@ -47,10 +47,6 @@ This is the full repo link https://github.com/executeautomation/kubernetes
 
 13. kubectl get pods (this should show you the list of the pods)
 
-## What is the Problem Now
-
-Noramlly when we install the selenium grid on minikube I can use kubctl get pods and find the IP of Node and I have binded the 30001 port to selenium HUB at 4444. I dont know how to expose the selenium Hub Worker Node. So I can access it ?
-
 ## Running the tests
 
 1. update the selenium hub url in tests/test.py and then run python /tests/parallel.py

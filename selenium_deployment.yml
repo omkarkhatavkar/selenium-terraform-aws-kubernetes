@@ -10,22 +10,24 @@ spec:
     type: RollingUpdate
     rollingUpdate:
       maxSurge: 1
-      maxUnavailable: 0      
+      maxUnavailable: 0  
   template:
     metadata:
       labels:
         app: selenium-hub
     spec:
       containers:
-      - name: selenium-hub
-        image: selenium/hub:3.14.0
-        resources:
-          limits:
-            memory: "1024Mi"
-            cpu: "500m"
-        ports:
-          - containerPort: 4444
-        livenessProbe:
+        - name: selenium-hub
+          image: selenium/hub:3.14.0
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
+          ports:
+            - name: http
+              containerPort: 4444
+          livenessProbe:
             httpGet:
               path: /wd/hub/status
               port: 4444
