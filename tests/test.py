@@ -10,7 +10,7 @@ class HackerNewsSearchTest(unittest.TestCase):
     def setUp(self):
     	caps = {'browserName': os.getenv('BROWSER', 'chrome')}
     	self.browser = webdriver.Remote(
-        	command_executor='http://172.17.0.2:30001/wd/hub',
+        	command_executor='http://demo.selenium-hub.in/wd/hub',
         	desired_capabilities=caps
     	)
 
@@ -55,4 +55,4 @@ class HackerNewsSearchTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(warnings='ignore')

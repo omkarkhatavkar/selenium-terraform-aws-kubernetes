@@ -18,11 +18,11 @@ spec:
     spec:
       containers:
         - name: selenium-hub
-          image: selenium/hub:3.14.0
+          image: selenium/hub:3.141.59
           imagePullPolicy: IfNotPresent
           resources:
             limits:
-              memory: "1024Mi"
+              memory: "512Mi"
               cpu: "500m"
           ports:
             - name: http
