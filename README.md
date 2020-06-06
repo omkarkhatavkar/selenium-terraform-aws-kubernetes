@@ -29,7 +29,7 @@ This is the full repo link https://github.com/executeautomation/kubernetes
 
 4. git clone https://github.com/omkarkhatavkar/selenium-terraform-aws-kubernetes.git
 
-5. cd eks-getting-started
+5. cd terraform_iac
 
 6. terraform apply (this creates the aws eks cluster)
 
@@ -45,7 +45,9 @@ This is the full repo link https://github.com/executeautomation/kubernetes
 
 12. kubectl create -f selenium_node.yml
 
-13. kubectl get pods (this should show you the list of the pods)
+13. kubectl create -f cluster-autoscaler.yml
+
+14. kubectl get pods (this should show you the list of the pods)
 
 ## Running the tests
 
